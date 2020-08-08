@@ -17,3 +17,22 @@ What did this command do?
 The publish part of the command exposes my local port 80 on my local machine and sends all traffic from it to the executable running inside that container on port 80. [nginx is a web server.]
 
 4. Routes that traffic to the container IP, port 80
+
+------------------------------------
+
+docker container ls
+
+docker container ls -a 
+	for listing container ID and which ones are running and more..
+
+docker container run --publish 80:80 --detach --name webhost nginx
+	to detach from running but runs in the background
+docker container logs webhost
+	show entries and logs on web host 
+docker container top webhost
+	shows the last few logs on webhost
+
+docker container rm fccf
+	removes fccf starting container ID
+docker container rm -f d46
+	-f forces to removes  
